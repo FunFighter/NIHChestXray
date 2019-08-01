@@ -20,7 +20,7 @@
 
 <!-- Navbar-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">    
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">DFXR</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,11 +47,11 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
-      </ul>
+      </ul><!--
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </nav>
 <!--Jumbotron-->
@@ -59,10 +59,52 @@
 
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <h1 class="display-3">DFXR</h1>
+      <p>Upload your x-ray for review</p>
+      <p></p>
+      <form method='post' action='' enctype="multipart/form-data">
+        Use choose file to select your image for upload, file types allowed .jpg .png <input type='file' name='file' id='file' class='form-control' ><br>
+        <input type='button' class='btn btn-primary btn-lg' value='Upload' id='upload'>
+      </form>
+
+
     </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md">
+        <h2>DFXR Overview</h2>
+        <p><h5>Why we chose our topic?</h5>We wanted to complete the final project on something impactful. 
+          All of our team members have been impacted by cancer be it indirectly or directly; so it felt suiting to leverage our knowledge
+          to build out an early detection model that analyzes chest x-rays to spot multiple types of disease. 
+        </p>
+        <p>
+          <h5>Concerns we had?</h5> We initally had concerns with running such a vast amount of training data through a regular
+          desktop computer. Brandon saved the day when he opened up his wallet and purchased a Nvidia RTX 2080 Ti GPU 
+          so that we could leverage the Tensor Flow compute nodes on the card; also Brandon will be benefiting from the 
+          additional frame rates when he plays The Sims.
+        </p>
+        <p>
+          <h5>About our model</h5>
+          We found an excellent source of data here. The data set size is approximately 40GB in size and includes more than 
+          112,000 different x-ray images. To train our model takes approximately five hours to run. <br>
+          We leveraged the following model:
+          <ul>
+            -Some Model Name
+          </ul>
+
+
+        </p>
+
+
+        <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
+
   </div>
 
 
@@ -88,7 +130,7 @@
 
     <hr>
 
-  </div> <!-- /container -->
+  </div>
 
 </body>
 </html>
