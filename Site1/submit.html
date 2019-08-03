@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NIH Chest X-ray CNN</title>
+    <title>Submit Your X-Ray</title>
 
     <link href="styles.css" rel="stylesheet">
   </head>
@@ -58,8 +58,7 @@
 
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">NIH Chest X-ray CNN</h1>
-      <p>Upload your x-ray for review</p>
+      <h2 class="display-3">Submit your personal x-ray for review</h2>
       <p></p>
       <form method='post' action='' enctype="multipart/form-data">
         Use choose file to select your image for upload, file types allowed .png <input type='file' name='file' id='file' class='form-control' ><br>
@@ -71,20 +70,18 @@
   </div>
 
   <div class="container">
-    <!-- Example row of columns -->
     <div class="row">
       <div class="col-md">
-        <h2>NIH Chest X-ray CNN</h2>
-        <p><h5>Why we chose our topic?</h5>We wanted to complete the final project on something impactful. 
-          All of our team members have been impacted by cancer be it indirectly or directly; so it felt suiting to leverage our knowledge
-          to build out an early detection model that analyzes chest x-rays to spot multiple types of disease.
+        <h2>FAQ</h2>
+        <p><h5>What happens after you submit your x-ray?</h5>Upon submission of your x-ray our model begins to analyze the image for any abnormalities.
+          Upon review the output will advise if any abnormalities were found.  
         </p>
         <p>
-          <h5>Concerns we had?</h5> We initally had concerns with running such a vast amount of training data through a regular
-          desktop computer. We ended up utilzing Brandon's desktop computer with a Nvidia RTX 2080 TI GPU to speed up model training.
+          <h5>What does the CNN model look like?</h5> The below is a great way to visualize a CNN model at a high level.<br>
+          <img src="img/cnn.png" height="350" width="600">
         </p>
         <p>
-          <h5>About our model</h5>
+          <h5>Sample input image</h5>
           We leveraged a National Institute of Health chest x-ray<a href="https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/36938765345"> dataset. </a>
           The data set size is approximately 40GB in size and includes more than 
           112,000 different x-ray images. Training the model takes approximately five hours, but varies on image resolution. The model trained 
@@ -93,83 +90,12 @@
         </p>
 
 
-        <!--<p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>-->
       </div>
     </div>
 
     <hr>
 
   </div>
-  <div class="container">
-  <p>
-  <h2>Meet The Team</h2>
-  </p>
-</div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mx-auto" style="width: 18rem;">
-          <img src="img/b_rad.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Brandon Leal</h5>
-            <p class="card-text">Full time Network Administrator for a local lumber company. Machine Learning junky.</p>
-            <a href="https://www.linkedin.com/in/brandon-leal-b69b05175/" class="card-link">LinkedIn</a>
-            <a href="https://github.com/FunFighter" class="card-link">Github</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto" style="width: 18rem;">
-          <img src="img/rebecca.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Rebecca Booth</h5>
-            <p class="card-text">Learning more each day about data. Experience at Intel, Microchip, and GoDaddy.</p>
-            <a href="https://www.linkedin.com/in/rebeccaboothaz/" class="card-link">LinkedIn</a>
-            <a href="#" class="card-link">Github</a>
-          </div>
-          </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mx-auto" style="width: 18rem;">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Mahan Abbasian</h5>
-            <p class="card-text">Undergrad in Biomedical Sciences, exploring the value of machine learning in the medical field.</p>
-            <a href="https://www.linkedin.com/in/mahan-abbasian-404a92175/" class="card-link">LinkedIn</a>
-            <a href="https://github.com/mahanabba" class="card-link">Github</a>
-          </div>
-      </div>
-    </div>
-  </div>
-<br>
-  <div class="container">
-      <div class="row">
-      <div class="col-md-6">
-        <div class="card mx-auto" style="width: 18rem;">
-          <img src="img/alesa.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Alesa Hipps</h5>
-            <p class="card-text">Graduate in Elementary education, passionate about childhood education.</p>
-            <a href="#" class="card-link">LinkedIn</a>
-            <a href="https://github.com/twohipps" class="card-link">Github</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mx-auto" style="width: 18rem;">
-          <img src="img/andy.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5>Andrew Scott</h5>
-            <p class="card-text">Tableau & Python lover, enjoy great visualizations.</p>
-            <a href="www.linkedin.com/in/andrew-scott-91234ba6" class="card-link">LinkedIn</a>
-            <a href="https://github.com/ascott4680" class="card-link">Github</a>
-          </div>
-          </div>
-        </div>
-
-  </div>
-
 
 </body>
 </html>
