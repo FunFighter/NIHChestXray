@@ -56,19 +56,16 @@
 <!--Jumbotron-->
 
 
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">NIH Chest X-ray CNN</h1>
-      <p>Upload your x-ray for review</p>
-      <p></p>
-      <form method='post' action='' enctype="multipart/form-data">
-        Use choose file to select your image for upload, file types allowed .png <input type='file' name='file' id='file' class='form-control' ><br>
-        <input type='button' class='btn btn-primary btn-lg' value='Upload' id='upload'>
-      </form>
 
-
-    </div>
+<div class="jumbotron jumbotron-fluid p-4 p-md-5 text-white bg-secondary">
+  <div class="col-md-8 offset-2 px-0">
+    <h1 class="display-4 font-italic">X-Ray Analysis With a CNN Model</h1>
+    <p class="lead my-3">
+      Leverage our machine learning model to analyze your personal x-ray for any abnormalities.
+    </p>
+    <a class="btn btn-outline-dark" href="submit.html" role="button">Submit your x-ray for review</a>
   </div>
+</div>
 
   <div class="container">
     <!-- Example row of columns -->
@@ -170,6 +167,30 @@
 
   </div>
 
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-6 offset-3 col-md">
+        <h5>References</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">One</a></li>
+          <li><a class="text-muted" href="#">Two</a></li>
+          <li><a class="text-muted" href="#">Three</a></li>
+          <li><a class="text-muted" href="#">Four</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>References</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Five</a></li>
+          <li><a class="text-muted" href="#">Six</a></li>
+          <li><a class="text-muted" href="#">Seven</a></li>
+          <li><a class="text-muted" href="#">Eight</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
 
 </body>
 </html>
