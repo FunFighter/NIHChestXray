@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Submit Your X-Ray</title>
+
+    <link href="styles.css" rel="stylesheet">
+  </head>
+
+
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<body>
+
+<!-- Navbar-->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">    
+  <a class="navbar-brand" href="#">NIH Chest X-ray CNN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><!--
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>-->
+        <!--
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>-->
+ <!--      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>--> 
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">A Machine Learning Analysis of 14 Common Thorax Diseases</a>
+        </li>
+      </ul><!--
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+<!--Jumbotron-->
+
+
+  <div class="jumbotron">
+    <div class="container">
+      <h2 class="display-3">Submit your personal x-ray for review</h2>
+      <p></p>
+      <form method='post' action='' enctype="multipart/form-data">
+        Use choose file to select your image for upload, file types allowed .png <input type='file' name='file' id='file' class='form-control' ><br>
+        <input type='button' class='btn btn-primary btn-lg' value='Upload' id='upload'>
+      </form>
+
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <h2>FAQ</h2>
+        <p><h5>What happens after you submit your x-ray?</h5>Upon submission of your x-ray our model begins to analyze the image for any abnormalities.
+          Upon review the output will advise if any abnormalities were found.  
+        </p>
+        <p>
+          <h5>What does the CNN model look like?</h5> The below is a great way to visualize a CNN model at a high level.<br>
+          <img src="img/cnn.png" height="350" width="600">
+        </p>
+        <p>
+          <h5>Sample input image</h5>
+          We leveraged a National Institute of Health chest x-ray<a href="https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/36938765345"> dataset. </a>
+          The data set size is approximately 40GB in size and includes more than 
+          112,000 different x-ray images. Training the model takes approximately five hours, but varies on image resolution. The model trained 
+          used Convolutional Neural Network or (CNN)<br>
+
+        </p>
+
+
+      </div>
+    </div>
+
+    <hr>
+
+  </div>
+
+</body>
+</html>
