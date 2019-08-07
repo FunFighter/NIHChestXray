@@ -77,7 +77,7 @@ var popperInstance = new Popper(reference, popper, {
 </div>
 
   <div class="container">
-    <!-- Example row of columns -->
+    <!-- main content -->
     <div class="row">
       <div class="col-md">
         <h2>NIH Chest X-ray CNN</h2>
@@ -97,11 +97,7 @@ var popperInstance = new Popper(reference, popper, {
           used Convolutional Neural Network or (CNN)<br>
 
         </p>
-        <h5>What we Learned</h5>
-        Throughout this process each us us learned a little bit more about diseases and some stats surrounding them. When visualizing 
-        our data it was quite clear to see that some of our 
-        <br>
-
+<hr>
       </p>
 
         <!--<p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>-->
@@ -123,9 +119,30 @@ var popperInstance = new Popper(reference, popper, {
       </div>
     </div>
 
-    <hr>
+  
 
   </div>
+
+  <div class="container">
+    <!-- What we learned -->
+    <div class="row">
+      <div class="col-md">
+        <h2>What we Learned</h2>
+        <p>We each learned a little bit more about diseases by reading through some of the documentation. What we did learn 
+          was that some diseases in the thorax are easy to detect like Cardiomegaly (enlarged heart) which can be very apparent on an x-ray, where as 
+          pneumothorax (collapsed lung) appeared near the bottom of patient lungs. 
+          Others like a mass or nodule are more difficult to see in an x-ray as they are often spreadout throughout the lung. <br>
+          With some of these abnomalities manifesting very similarly in our data we had to train the model with each 
+          specific disease data set in order to increase model accuracy.
+        <br>
+        <h5>A great way to visualize our disease data is shown here below, each marker represents an abnormality location.</h5> <br>
+        <div class='tableauPlaceholder' id='viz1565147575405' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;4F&#47;4F4T5HB29&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;4F4T5HB29' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;4F&#47;4F4T5HB29&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1565147575405');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </p>
+      </div>
+    </div>
+  </div>
+
+<hr>
   <div class="container">
   <p>
   <h2>Meet The Team</h2>
@@ -158,7 +175,7 @@ var popperInstance = new Popper(reference, popper, {
 
       <div class="col-md-4">
         <div class="card mx-auto" style="width: 18rem;">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+          <img src="../static/img/mahan.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5>Mahan Abbasian</h5>
             <p class="card-text">Undergrad in Biomedical Sciences, exploring the value of machine learning in the medical field.</p>
@@ -199,22 +216,21 @@ var popperInstance = new Popper(reference, popper, {
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
+
       <div class="col-6 offset-3 col-md">
         <h5>References</h5>
         <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="https://nihcc.app.box.com/v/ChestXray-NIHCC/">Project Source Data</a></li>
           <li><a class="text-muted" href="https://stanfordmlgroup.github.io/projects/chexnet/">Detecting Pneumonia from Chest X-Rays</a></li>
-          <li><a class="text-muted" href="https://nihcc.app.box.com/v/ChestXray-NIHCC/">Source Data</a></li>
           <li><a class="text-muted" href="https://medium.com/@vijayabhaskar96">Vijayabhaskar J on Medium.com</a></li>
-          <li><a class="text-muted" href="#">Four</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>References</h5>
+        <h5> </h5>
         <ul class="list-unstyled text-small">
           <li><a class="text-muted" href="https://www.linkedin.com/in/shahinmm/">Shahin Movafagh Mowzoon in Person</a></li>
           <li><a class="text-muted" href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_ChestX-ray8_Hospital-Scale_Chest_CVPR_2017_paper.pdf">ChestX-ray8: Hospital-scale Chest X-ray Database</a></li>
           <li><a class="text-muted" href="https://www.linkedin.com/in/billwparker/">Bill Parker in Person</a></li>
-          <li><a class="text-muted" href="#">Eight</a></li>
         </ul>
       </div>
     </div>
