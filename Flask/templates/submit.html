@@ -58,7 +58,7 @@
 
   <div class="jumbotron">
     <div class="container">
-      <h2 class="display-3">Submit your personal x-ray for review</h2>
+      <h2 class="display-3">Submit Your X-Ray For Review</h2>
       <p></p>
       <form method='post' action='' enctype="multipart/form-data">
         Use choose file to select your image for upload, file types allowed .png <input type='file' name='file' id='file' class='form-control' ><br>
@@ -72,22 +72,127 @@
   <div class="container">
     <div class="row">
       <div class="col-md">
-        <h2>FAQ</h2>
-        <p><h5>What happens after you submit your x-ray?</h5>Upon submission of your x-ray our model begins to analyze the image for any abnormalities.
-          Upon review the output will advise if any abnormalities were found.  
-        </p>
-        <p>
-          <h5>What does the CNN model look like?</h5> The below is a great way to visualize a CNN model at a high level.<br>
-          <img src="../static/img/cnn.png" height="350" width="600">
-        </p>
-        <p>
-          <h5>Sample input image</h5>
-          We leveraged a National Institute of Health chest x-ray<a href="https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/36938765345"> dataset. </a>
-          The data set size is approximately 40GB in size and includes more than 
-          112,000 different x-ray images. Training the model takes approximately five hours, but varies on image resolution. The model trained 
-          used Convolutional Neural Network or (CNN)<br>
+        <style>
 
-        </p>
+          h2 {
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+      
+          h3 {
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+      
+          dt {
+              font-family: Tahoma, Verdana, Segoe, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; 
+          }
+          
+         dd {
+          font-family: Tahoma, Verdana, Segoe, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 22px; 
+          }
+          </style>
+      
+          <h2>Descriptions and Visual Examples of Common Thoracic Diseases</h2>
+          <br>
+          <h3>8 Common Lung Diseases</h3>
+          <br>
+          <img src="../static/img/eightcommon.png" alt="8 common lung diseases" hspace="50">
+      <br>
+          <dl>
+              <dt>Atelectasis</dt>
+                  <br>
+                  <img src="../static/img/00030674_atelectatis.png" alt="Atelectasis" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>Collapse or closure of a lung resulting in reduced or absent gas exchange.</dd>
+                  <br>
+      
+              <dt>Cardiomegaly</dt>
+                  <br>
+                  <img src="../static/img/00030279_cardiomegaly.png" alt="Cardiomegaly" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>Enlarged heart.</dd>
+                  <br>
+      
+              <dt>Effusion</dt>
+                  <br>
+                  <img src="../static/img/00030634_effusion.png" alt="Effusion" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>Pleural effusion that arises as a result of a pneumonia, lung abscess, or bronchiectasis.</dd>
+                  <br>
+      
+              <dt>Infiltration</dt>
+                  <br>
+                  <img src="../static/img/00030636_infiltrate.png" alt="Infiltration" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>A pulmonary infiltrate is a substance denser than air, such as pus, blood, or protein, which lingers within the parenchyma of the lungs. Pulmonary infiltrates are associated with pneumonia, tuberculosis, and nocardiosis.</dd>
+                  <br>
+      
+              <dt>Mass</dt>
+                  <br>
+                  <img src="../static/img/00030323_mass.png" alt="mass" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>Pulmonary mass is any area of pulmonary opacification that measures more than 30 mm. The most common cause of a pulmonary mass is lung cancer.</dd>
+                  <br>
+      
+              <dt>Nodule</dt>
+                  <br>
+                  <img src="../static/img/00030412_nodule.png" alt="Nodule" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>A small single mass in the lungs that's usually benign.	</dd>
+                  <br>
+      
+              <dt>Pneumonia</dt>
+                  <br>
+                  <img src="../static/img/00029861_pneumonia.png" alt="Pneumonia" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>Pneumonia is an inflammatory condition of the lung affecting primarily the small air sacs known as alveoli.</dd>
+                  <br>
+      
+              <dt>Pneumothorax</dt>
+                  <br>
+                  <img src="../static/img/00030606_pneunothorax.png" alt="Pneumothorax" width="300" height="300" hspace="50">
+                  <br>
+                  <dd>A pneumothorax is an abnormal collection of air in the pleural space between the lung and the chest wall.</dd>
+                  <br>
+      </dl>
+      
+                  <br>
+      
+      <dl>
+      
+          <dt>Edema</dt>
+              <dd>Pulmonary edema is fluid accumulation in the tissue and air spaces of the lungs.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+              <br>
+      
+          <dt>Pleural Thickening</dt>
+              <dd>Pleural plaques are patchy collections of hyalinized collagen in the parietal pleura.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+              <br>
+      
+          <dt>Emphysema</dt>
+              <dd>Obstructive lung disease characterized by long-term breathing problems and poor airflow.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+              <br>
+      
+          <dt>Fibrosis</dt>
+              <dd>Fibrosis is a respiratory disease in which scars are formed in the lung tissues, leading to serious breathing problems.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+              <br>
+      
+          <dt>Hernia</dt>
+              <dd>Lung hernia (Sibson hernia) is a protrusion of lung outside of thoracic wall.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+              <br>
+      
+          <dt>Consolidation</dt>
+              <dd>Region of normally compressible lung tissue that has filled with liquid instead of air.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+              <br>
+      
+          <dt>Edema</dt>
+              <dd>Pulmonary edema is fluid accumulation in the tissue and air spaces of the lungs.</dd>
+              <!-- <img src="" alt="" width="300" height="300"> -->
+      </dl>
 
 
       </div>
