@@ -25,32 +25,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><!--
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-        </li>-->
-        <!--
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>-->
- <!--      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>--> 
+        <li class="nav-item active">
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">A Machine Learning Analysis of 14 Common Thorax Diseases</a>
         </li>
-      </ul><!--
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
+      </ul>
     </div>
   </nav>
 <!--Jumbotron-->
@@ -60,21 +39,47 @@
     <div class="container">
       <h2 class="display-3">Submit Your X-Ray For Review</h2>
       <p></p>
-      <form method='post' action='' enctype="multipart/form-data">
+      <form method='post' action='/submit' enctype="multipart/form-data">
         Use choose file to select your image for upload, file types allowed .png <input type='file' name='file' id='file' class='form-control' ><br>
-        <input type='button' class='btn btn-primary btn-lg' value='Submit' id='upload'>
+        <input type='submit' class='btn btn-primary btn-lg' value='Submit' id='upload'>
       </form>
-
-
     </div>
   </div>
+  <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      tr:hover {background-color:#f5f5f5;}
+      </style>
+
+
 
   <div class="container">
     <div class="row">
+  
+        <tbody>
+            <table>
+        <tr>
+            <th scope="row">Value1</th>
+            <th>Value2</th> 
+          </tr>
+          <tr>
+            <td>{{ 2*8 }}</td>
+            <td>{{ 2*8 }}</td> 
+          </tr>
+        </table>
+      </tbody>
       <div class="col-md">
         <style>
 
           h2 {
+            padding-top: 15px;
               font-family: Tahoma, Verdana, Segoe, sans-serif;
           }
       
