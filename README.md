@@ -1,4 +1,6 @@
 (Upcoming push for the updated model and model break down notebooks coming soon)
+![Image Preview](https://raw.githubusercontent.com/FunFighter/NIHChestXray/master/sample%20img.png)
+
 
 # NIH Chest X-ray Data Set
 These are chest x-rays provided by the National Institutes of Health - Clinical Center at https://nihcc.app.box.com/v/ChestXray-NIHCC
