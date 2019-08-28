@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 from flask import Flask, render_template, request, jsonify 
 from werkzeug.utils import secure_filename
 import os
@@ -5,9 +6,10 @@ import os
 import numpy as np
 
 import keras
-from keras.preprocessing import image
-from keras import backend as K
+from PIL import Image
 
+from keras import backend as K
+from skimage import transform
 import pickle
 
 app = Flask(__name__)
@@ -37,10 +39,19 @@ all_labels = ['Atelectasis',
 def load_model(ModelName):
     global model
     global graph
-    model = keras.models.load_model(f'./Models/{ModelName}.h5')
+    model = keras.models.load_model(f'Models/{ModelName}.h5')
 
 
+def load(filename):
+    np_image = Image.open(filename)
+    np_image = np.array(np_image).astype('float32')/255
+    np_image = transform.resize(np_image, (256, 256, 3))
+    np_image = np.expand_dims(np_image, axis=0)
+    return np_image
 
+# image = load(test_image2)
+# results = model.predict(image)
+# results
 
 # for label in all_labels:
 #     load_model(label)
@@ -49,21 +60,6 @@ def load_model(ModelName):
 @app.route('/')
 def index():
     return render_template('index.html')
-
-# define a predict function as an endpoint 
-@app.route("/predict", methods=["GET","POST"])
-def predict():
-    data = {"success": False}
-    # get the request parameters
-    params = request.json
-    if (params == None):
-        params = request.args
-    # if parameters are found, echo the msg parameter 
-    if (params != None):
-        data["response"] = params.get("msg")
-        data["success"] = True
-    # return a response in json format 
-    return jsonify(data)
 
 
 @app.route('/submit', methods = ['GET', 'POST'])
@@ -85,32 +81,25 @@ def submit():
             # Save the file to the uploads folder
             file.save(filepath)
 
-            # Load the saved image using Keras and resize it to the mnist
-            # format of 230x230 pixels
-            img = image.load_img(filepath, target_size=(230, 230))
-            x = image.img_to_array(img)
-            x = np.expand_dims(x, axis=0)
-            images = np.vstack([x])
-            predicted_digit = model.predict(images, batch_size=10)
-     
-            print(predicted_digit)
 
-            # Get the tensorflow default graph and use it to make predictions
-            
-            
+            image = load(filepath)
+            predicted_digit = model.predict(image)
 
             # Use the model to make a prediction
-            
             data["prediction"] = predicted_digit
+
+            data["prediction"] = [i * 2 for i in data["prediction"]]
 
             # indicate that the request was a success
             data["success"] = True
+            
+            print(type(data["prediction"]))
 
             return render_template('submit.html',dataStuff = data["prediction"])
 
     return render_template('submit.html')
 
 if __name__ == '__main__':
-   load_model("Cardiomegaly")
+   load_model("MO")
    model._make_predict_function()
    app.run(debug = True ,port=5555)
